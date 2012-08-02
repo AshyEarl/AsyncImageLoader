@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/go"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/q"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="请输入搜索关键字"
+                android:text="美女" />
+
+            <EditText
+                android:id="@+id/as_sitesearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="若需从指定站点搜索,请输入站点网址" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ToggleButton
+                    android:id="@+id/imgc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:textOff="黑白图"
+                    android:textOn="彩图" />
+
+                <ToggleButton
+                    android:id="@+id/safe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:textOff="安全搜索:关闭"
+                    android:textOn="安全搜索:开启" />
+
+                <EditText
+                    android:id="@+id/rsz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="单次加载图片数量"
+                    android:inputType="numberSigned"
+                    android:text="4" >
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/as_filetype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="全部格式" />
+
+                <RadioButton
+                    android:id="@+id/jpg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jpg" />
+
+                <RadioButton
+                    android:id="@+id/png"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="png" />
+
+                <RadioButton
+                    android:id="@+id/bmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bmp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/imgsz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/small" >
+
+                <RadioButton
+                    android:id="@+id/noneSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="全部尺寸" />
+
+                <RadioButton
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图标,很小的图片" />
+
+                <RadioButton
+                    android:id="@+id/small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小图,就是小图啦" />
+
+                <RadioButton
+                    android:id="@+id/medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中等图片,只能说不大" />
+
+                <RadioButton
+                    android:id="@+id/large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大图,一般大的图片" />
+
+                <RadioButton
+                    android:id="@+id/xlarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更大的图,这才是大图" />
+
+                <RadioButton
+                    android:id="@+id/xxlarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="巨大的图,好吧还有更大的..." />
+
+                <RadioButton
+                    android:id="@+id/huge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="极大的图,...小心你的流量哟..." />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="开始搜索" />
+
+</RelativeLayout>
